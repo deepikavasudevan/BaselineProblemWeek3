@@ -12,6 +12,9 @@ public class Item {
     }
 
     public boolean isExemptedFromSalesTax() {
-        return true;
+        if(name.equals("book"))
+            return true;
+        else
+            return false;
     }
 }
