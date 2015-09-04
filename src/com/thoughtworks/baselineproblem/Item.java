@@ -20,6 +20,9 @@ public class Item {
     }
 
     public double salesTax() {
+        if(isExemptedFromSalesTax())
+            return 0.0;
+        else
             return Math.ceil((0.10 * cost) * 20.0) / 20.0;
     }
 }
