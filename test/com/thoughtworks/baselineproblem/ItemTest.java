@@ -3,6 +3,7 @@ package com.thoughtworks.baselineproblem;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertFalse;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class ItemTest {
@@ -47,5 +48,12 @@ public class ItemTest {
         Item item = new Item("chocolates", 11.25);
 
         assertTrue(item.isExemptedFromSalesTax());
+    }
+
+    @Test
+    public void shouldHaveSalesTaxIfItIsNotExemptedFromSalesTax() {
+        Item item = new Item("bottle of perfume", 18.99);
+
+        assertEquals(1.90, item.salesTax(), 0.0);
     }
 }

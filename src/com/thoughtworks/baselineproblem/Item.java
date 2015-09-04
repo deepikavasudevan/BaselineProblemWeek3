@@ -12,10 +12,14 @@ public class Item {
     }
 
     public boolean isExemptedFromSalesTax() {
-        if(name.equals("book") || name.equals("chocolate bar") || name.equals("box of chocolates")
-                || name.equals("headache pills") || name.equals("chocolates"))
+        if(name.equals("book") || name.equals("chocolate bar") || name.equals("box of chocolates") || name.equals("chocolates")
+                || name.equals("headache pills"))
             return true;
         else
             return false;
+    }
+
+    public double salesTax() {
+            return Math.ceil((0.10 * cost) * 20.0) / 20.0;
     }
 }
