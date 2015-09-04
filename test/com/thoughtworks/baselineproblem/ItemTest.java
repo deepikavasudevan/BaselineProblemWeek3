@@ -16,8 +16,15 @@ public class ItemTest {
 
     @Test
     public void shouldNotBeExemptedFromSalesTaxIfMusicCd() {
-        Item item = new Item("music CD", 0.85);
+        Item item = new Item("music CD", 14.99);
 
         assertFalse(item.isExemptedFromSalesTax());
+    }
+
+    @Test
+    public void shouldBeExemptedFromSalesTaxIfChocolateBar() {
+        Item item = new Item("chocolate bar", 0.85);
+
+        assertTrue(item.isExemptedFromSalesTax());
     }
 }
