@@ -4,11 +4,11 @@ package com.thoughtworks.baselineproblem;
 public class Item {
 
     private String name;
-    private double cost;
+    private double shelfPrice;
 
-    public Item(String name, double cost) {
+    public Item(String name, double shelfPrice) {
         this.name = name;
-        this.cost = cost;
+        this.shelfPrice = shelfPrice;
     }
 
     public boolean isExemptedFromSalesTax() {
@@ -23,6 +23,6 @@ public class Item {
         if(isExemptedFromSalesTax())
             return 0.0;
         else
-            return Math.ceil((0.10 * cost) * 20.0) / 20.0;
+            return Math.ceil((0.10 * shelfPrice) * 20.0) / 20.0;
     }
 }
