@@ -12,7 +12,7 @@ public class Item {
     }
 
     public boolean isExemptedFromSalesTax() {
-        if(name.equals("book") || name.equals("chocolate bar") || name.equals("box of chocolates"))
+        if(name.equals("book") || name.equals("chocolate bar") || name.equals("box of chocolates") || name.equals("headache pills"))
             return true;
         else
             return false;
